@@ -5,6 +5,8 @@ import context from "../../context";
 import { BsFileText } from "react-icons/bs";
 import { BsBoxArrowLeft, BsPen } from "react-icons/bs";
 import { RiTrophyLine } from "react-icons/ri";
+import Accordion from "react-bootstrap/Accordion";
+import LastExams from "../LastExams/LastExams";
 
 const UserPanel = () => {
   const { values } = useContext(context.context);
@@ -56,67 +58,48 @@ const UserPanel = () => {
 
             <div className="user-panel__body pt-5 col-9 gx-0">
               <h2 className="user-panel__body-title">Testlar</h2>
-              <div
-                className="accordion accordion-flush"
-                id="accordionFlushExample"
-              >
+              <Accordion className="accordion_2">
                 {user.map((exam, id) => {
                   return (
-                    <div className="accordion-item" key={exam.exam_id}>
-                      <h2 className="accordion-header" id={`flush-headingOne`}>
-                        <button
-                          className="accordion-button w-100 collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target={`#flush-collapse${exam.exam_id}`}
-                          aria-expanded="false"
-                          aria-controls={`flush-collapseOne`}
-                        >
-                          <span>Test #{id + 1}</span>
-                          <p className="date m-0">
-                            {exam.created_at.split("T")[0]}
+                    <Accordion.Item className="text" eventKey={exam.exam_id}>
+                      <Accordion.Header className="accordion-btn text">
+                        <span>Test #{id + 1}</span>
+                        <p className="date m-0">
+                          {exam.created_at.split("T")[0]}
+                        </p>
+                        <p className="ball m-0">
+                          {exam.mark.overAllMark}/189.0
+                        </p>
+                      </Accordion.Header>
+                      <Accordion.Body className="d-flex justify-content-between aligin-items-center">
+                        <div className="result">
+                          {exam.faculty[0].faculty}
+                          <br />({exam.unversity[0].unversity})
+                          <p>
+                            {exam.result == "grand"
+                              ? "Davlat grandi"
+                              : exam.result == "contract"
+                              ? "Shartnoma asosida"
+                              : "Rad etildi"}
                           </p>
-                          <p className="ball m-0">
-                            {exam.mark.overAllMark}/189.0
-                          </p>
-                        </button>
-                      </h2>
-                      <div
-                        id={`flush-collapse${exam.exam_id}`}
-                        className="accordion-collapse collapse"
-                        aria-labelledby={`flush-headingOne`}
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div className="accordion-body d-flex justify-content-between">
-                          <div className="result">
-                            {exam.faculty[0].faculty}
-                            <br />({exam.unversity[0].unversity})
-                            <p>
-                              {exam.result == "grand"
-                                ? "Davlat grandi"
-                                : exam.result == "contract"
-                                ? "Shartnoma asosida"
-                                : "Rad etildi"}
-                            </p>
-                          </div>
-                          <div className="marks d-flex gap-5">
-                            <p className="mark-1">
-                              Blok#1
-                              <br />
-                              {exam.mark.subjects[0].trueAnswers} / 15
-                            </p>
-                            <p className="mark-1">
-                              Blok#2
-                              <br />
-                              {exam.mark.subjects[1].trueAnswers} / 15
-                            </p>
-                          </div>
                         </div>
-                      </div>
-                    </div>
+                        <div className="marks d-flex gap-5">
+                          <p className="mark-1">
+                            Blok#1
+                            <br />
+                            {exam.mark.subjects[0].trueAnswers} / 15
+                          </p>
+                          <p className="mark-1">
+                            Blok#2
+                            <br />
+                            {exam.mark.subjects[1].trueAnswers} / 15
+                          </p>
+                        </div>
+                      </Accordion.Body>
+                    </Accordion.Item>
                   );
                 })}
-              </div>
+              </Accordion>
             </div>
           </div>
         </div>

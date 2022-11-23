@@ -6,7 +6,7 @@
   font-weight: 500;
   line-height: 33px;
 }
-.accordion {
+.accordion_2 {
   height: 700px;
   overflow: auto;
 }
@@ -19,8 +19,11 @@
   font-weight: 500;
   line-height: 37.5px;
 }
-
-.accordion-button {
+.text {
+  font-size: 18px;
+  font-weight: 500;
+}
+.accordion-btn {
   width: 100%;
   display: flex !important;
   font-size: 18px;

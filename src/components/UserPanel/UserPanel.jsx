@@ -63,10 +63,7 @@ const UserPanel = () => {
                 {user.map((exam, id) => {
                   return (
                     <div className="accordion-item" key={exam.exam_id}>
-                      <h2
-                        className="accordion-header"
-                        id={`flush-heading${exam.exam_id}`}
-                      >
+                      <h2 className="accordion-header" id={`flush-headingOne`}>
                         <button
                           className="accordion-button w-100 collapsed"
                           type="button"
@@ -87,7 +84,7 @@ const UserPanel = () => {
                       <div
                         id={`flush-collapse${exam.exam_id}`}
                         className="accordion-collapse collapse"
-                        aria-labelledby={`flush-heading${exam.exam_id}`}
+                        aria-labelledby={`flush-headingOne`}
                         data-bs-parent="#accordionFlushExample"
                       >
                         <div className="accordion-body d-flex justify-content-between">

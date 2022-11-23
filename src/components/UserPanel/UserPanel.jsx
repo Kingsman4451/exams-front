@@ -63,11 +63,11 @@ const UserPanel = () => {
                   return (
                     <Accordion.Item className="text" eventKey={exam.exam_id}>
                       <Accordion.Header className="accordion-btn text">
-                        <span>Test #{id + 1}</span>
-                        <p className="date m-0">
+                        <span className="text">Test #{id + 1}</span>
+                        <p className="text date m-0">
                           {exam.created_at.split("T")[0]}
                         </p>
-                        <p className="ball m-0">
+                        <p className="ball text m-0">
                           {exam.mark.overAllMark}/189.0
                         </p>
                       </Accordion.Header>

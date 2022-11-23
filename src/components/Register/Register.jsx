@@ -43,7 +43,7 @@ const Register = () => {
       setFullname("");
       setGender("");
       setRegion("");
-    }, 500);
+    }, 1000);
   };
   const textError = useRef();
   const nevRef = useRef();

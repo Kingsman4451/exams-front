@@ -70,7 +70,7 @@ const UserPanel = () => {
                           data-bs-toggle="collapse"
                           data-bs-target={`#flush-collapse${exam.exam_id}`}
                           aria-expanded="false"
-                          aria-controls={`flush-collapse${exam.exam_id}`}
+                          aria-controls={`flush-collapseOne`}
                         >
                           <span>Test #{id + 1}</span>
                           <p className="date m-0">

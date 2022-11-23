@@ -31,7 +31,7 @@ const Login = () => {
         : toast.error("Username yoki parol noto'g'ri!");
       setUsername("");
       setPassword("");
-    }, 500);
+    }, 1000);
   };
   const textError = useRef();
   const nevRef = useRef();

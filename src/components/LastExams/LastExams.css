@@ -1,0 +1,31 @@
+.exam__title {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 52px;
+  margin-bottom: 40px;
+}
+
+.rows{
+  font-size: 20px;
+  font-weight: 500;
+  height:60px
+}
+
+.column {
+  position: relative;
+}
+.column:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -22px;
+  width: 1px;
+  height: 40px;
+  background-color: #AEAEAE;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem;
+  line-height: 60px;
+}

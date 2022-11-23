@@ -1,0 +1,55 @@
+.sidebar__links {
+  height: 80vh;
+}
+.sidebar__link {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+}
+.accordion {
+  height: 700px;
+  overflow: auto;
+}
+.active {
+  color: #18A0FB!important;
+}
+
+.user-panel__body-title {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 37.5px;
+}
+
+.accordion-button {
+  width: 100%;
+  display: flex !important;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 0;
+}
+
+.ball {
+  position: absolute;
+  right: 80px;
+}
+
+.result {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+}
+
+.marks {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.date {
+  position:absolute;
+  right:50%
+}
+
+.logout {
+  position:absolute;
+  bottom: 0;
+}

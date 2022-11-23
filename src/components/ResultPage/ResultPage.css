@@ -1,0 +1,23 @@
+.result__text {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 500;
+}
+.progress {
+  width: 300px!important;
+}
+
+.content__title {
+  font-size: 36px;
+  line-height: 54px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.content__text {
+  font-size: 24px;
+}
